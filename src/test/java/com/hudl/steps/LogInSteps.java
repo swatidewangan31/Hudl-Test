@@ -42,7 +42,7 @@ public class LogInSteps {
     public void verify_hudl_login_page_is_displayed() {
       String text = TestData.getValue("login button");
       logInPage = helper.getLogInPage().clickHudlOption();
-      //assertThat(helper.getLogInPage().verifyLogInPage(text), is(true));
+      assertThat(helper.getLogInPage().verifyLogInPage(text), is(true));
     }
 
     @When("I enter the details to login")
@@ -60,7 +60,7 @@ public class LogInSteps {
     @Then("Verify the success message should be displayed")
     public void verify_the_success_message_should_be_displayed() {
         String text = TestData.getValue("user menu");
-        //Assert.assertEquals(helper.getLogInPage().verifySuccessfulLogIn(), text);
+        Assert.assertEquals(helper.getLogInPage().verifySuccessfulLogIn(), text);
     }
 
     //Invalid Login
@@ -76,7 +76,7 @@ public class LogInSteps {
     @Then("Verify the error message is displayed")
     public void verify_the_error_message_is_displayed() {
         String text = TestData.getValue("error message");
-        //Assert.assertEquals(logInPage.verifyErrorMessage(), text);
+        Assert.assertEquals(logInPage.verifyErrorMessage(), text);
     }
 
     //EmptyDetails
