@@ -27,7 +27,7 @@ public class LogInAsOrgSteps {
     @Then("Verify Hudl login as organisation page is displayed")
     public void verify_hudl_login_as_organisation_page_is_displayed() {
         String header = TestData.getValue("org title");
-        //Assert.assertEquals(logInPage.verifyLogInAsOrgPage(), header);
+        Assert.assertEquals(logInPage.verifyLogInAsOrgPage(), header);
     }
 
     @When("I enter the details to login as Org")
@@ -44,7 +44,7 @@ public class LogInAsOrgSteps {
     @Then("Verify the error message is displayed for an org")
     public void verify_the_error_message_is_displayed_for_an_org() {
         String text = TestData.getValue("error message3");
-        //Assert.assertEquals(helper.getBasePage().verifyErrorMessage(), text);
+        Assert.assertEquals(helper.getBasePage().verifyErrorMessage(), text);
     }
 
 }
