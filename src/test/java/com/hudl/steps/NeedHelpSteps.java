@@ -27,7 +27,7 @@ public class NeedHelpSteps {
     @Then("Verify the Login Help page is displayed")
     public void verify_the_login_help_page_is_displayed() {
         String text = TestData.getValue("help title");
-      // Assert.assertEquals(needHelpPage.verifyNeedHelpPage(), text);
+        Assert.assertEquals(needHelpPage.verifyNeedHelpPage(), text);
     }
 
     @When("I enter the email address for resetting the password")
@@ -44,7 +44,7 @@ public class NeedHelpSteps {
     @Then("Verify the email has successfully sent to the user")
     public void verify_the_email_has_successfully_sent_to_the_user() {
         String text = TestData.getValue("success msg1");
-        //Assert.assertEquals(needHelpPage.verifyNeedHelpSucessMsg(), text);
+        Assert.assertEquals(needHelpPage.verifyNeedHelpSucessMsg(), text);
     }
 
     //invalid user to reset password
@@ -58,6 +58,6 @@ public class NeedHelpSteps {
     @Then("Verify error message for invalid user in help page")
     public void verify_error_message_for_invalid_user_in_help_page() {
         String text = TestData.getValue("error message2");
-        //Assert.assertEquals(needHelpPage.verifyErrorMessage(), text);
+        Assert.assertEquals(needHelpPage.verifyErrorMessage(), text);
     }
 }
